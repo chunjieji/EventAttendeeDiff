@@ -8,6 +8,9 @@ const nextConfig = {
   images: {
     domains: ['open.bigmodel.cn'],
   },
+  experimental: {
+    forceSwcTransforms: true,
+  },
 };
 
 module.exports = nextConfig;
