@@ -25,7 +25,7 @@ export default async function handler(
     // 尝试从数据库操作
     try {
       const { db } = await connectToDatabase();
-      const collection = db.collection<NameListTemplate>('templates');
+      const collection = db.collection('templates');
       
       switch (req.method) {
         case 'GET':

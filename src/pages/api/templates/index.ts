@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { connectToDatabase, saveTemplatesToFile } from '@/lib/mongodb';
-import { NameListTemplate } from '@/models/NameListTemplate';
+import { NameListTemplate, NameListTemplateInput } from '@/models/NameListTemplate';
 import { ObjectId } from 'mongodb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

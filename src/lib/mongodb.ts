@@ -5,7 +5,8 @@ import path from 'path';
 
 // 使用内存数据库替代
 let mongoMemoryServer: MongoMemoryServer | null = null;
-let mongoUri = process.env.MONGODB_URI;
+// 确保类型为 string，避免 TS 推断为 string | undefined
+let mongoUri: string = process.env.MONGODB_URI ?? '';
 const MONGODB_DB = process.env.MONGODB_DB || 'event-attendee-diff';
 const DATA_DIR = path.join(process.cwd(), 'data');
 const TEMPLATES_FILE = path.join(DATA_DIR, 'templates.json');
